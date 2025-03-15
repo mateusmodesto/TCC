@@ -1,0 +1,216 @@
+/*
+    #324AE6
+    #60E600
+    #5D00E6
+    #E6DE00
+    #6F598F
+    #333A66
+
+    #3B9CE6
+*/
+
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'TituloSigmar';
+    src: url(../Fontes/Sigmar-Regular.ttf);
+}
+@font-face {
+    font-family: 'TituloPermament';
+    src: url(../Fontes/PermanentMarker-Regular.ttf);
+}
+@font-face {
+    font-family: 'TituloBerk';
+    src: url(../Fontes/BerkshireSwash-Regular.ttf);
+}
+@font-face {
+    font-family: 'SubTitulo';
+    src: url(../Fontes/Anton-Regular.ttf);
+}
+:root{
+    --cor1: #324AE6;
+    --cor2: #60E600;
+    --cor3: #5D00E6;
+    --cor4: #E6DE00;
+    --cor5: #6F598F;
+    --cor6: #333A66;
+
+    --font-titulo: 'TituloPermament';
+    --font-subtitulo: 'SubTitulo';
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: black;
+}
+
+header{
+    background-color: #344fff;
+    color: white;
+    padding: 25px 10px 5px 10px; 
+    margin-bottom: 20px;
+}
+.titulo{
+   text-align: center;
+   font-family: var(--font-titulo);
+   padding: 10px;
+}
+.titulo>h1{
+    display: inline-block;
+    transform: translate( -2px, -21px);
+    font-size: 3em;
+    text-shadow: 0px 0px 50px var(--cor3);
+    text-transform: uppercase;
+    
+}
+#logo{
+    display: inline-block;   
+    margin: 5px;   
+    border-radius: 100%;
+    width: 180px;
+    transform: translate(0px, -30px);
+}
+nav{
+    background-color: #344fff ;
+}
+
+.pesquisar{
+    display: inline-block;
+
+}
+#pesquisa{
+    height: 40px;
+    width: 200px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.botao_pesquisar{
+    background-color: #60E600;
+    color:white;
+    width: 50px;
+    border-radius: 5px;
+    border: 0px;
+    padding: 7.5px;
+}
+
+.botao_pesquisar:hover{
+
+    transition: 0.25s;
+    border: 1px solid white;
+    background-color: #5ee200 ;
+
+}
+
+main{
+    margin: auto;
+    padding: 10px;
+    background-color: white;
+}
+main p{
+    text-align: justify;
+}
+main h2{
+    font-family: var(--font-subtitulo)
+}
+
+#propaganda{
+    width: 100%;
+    height: 700px;
+
+    display: grid;
+    place-items: center; /* Atalho para alinhar ao centro */
+
+    background-image: url("../Imagens/Propaganda.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+#gol_propaganda{
+    background-color: var(--cor6);
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+
+    width: 90px;
+    height: 45px;
+    font-weight: bold;
+}
+
+#gol_propaganda:hover{
+    transition: 1s;
+    background-color: var(--cor1);
+    text-decoration: underline;
+}
+
+#Escolas_faixa{
+    background-color: var(--cor6);
+    margin-bottom: 30px;
+}
+
+#Escolas_faixa img{
+    width: 90px;
+    padding: 10px;
+    border-radius: 100%;
+}
+#titulo_parceria{
+    color: white;
+    text-align: center;
+    
+    
+}
+
+.InterclasseAoVivo{
+    border: 1px solid rgba(0, 0, 0, 0.486);
+    margin: 20px;  
+    padding:20px;  
+    min-width: 760px;
+    overflow: auto;
+}
+
+.Classificacao{
+    margin:    10px; 
+    padding:   0px;
+    width: 50vw;
+    float:left;
+}
+
+#Jogos{
+    width: 27.3vw;
+    float: right;
+}
+
+.jogo{ 
+    max-width: 231px; 
+    height: 90px;
+    border: 1px solid gray;
+    text-align: center;
+    display: inline-block;
+    margin: 5px;
+
+    
+}
+
+
+
+.jogo img{
+    width: 60px;
+    border-radius: 100%;
+    margin: 15px 10px 0px 10px;
+
+}
+
+#Campeonatos_recentes{
+    align-items: center;
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 7.5px;
+}
