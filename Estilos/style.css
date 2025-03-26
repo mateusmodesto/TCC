@@ -37,6 +37,8 @@
 
     --font-titulo: 'TituloPermament';
     --font-subtitulo: 'SubTitulo';
+    --font-Qatar: 'TituloBerk';
+    --font-Sigmar: 'TituloSigmar';
 }
 
 *{
@@ -149,8 +151,12 @@ main h2{
 }
 
 #Escolas_faixa{
-    background-color: var(--cor6);
-    margin-bottom: 30px;
+    background-image:url("../Imagens/Fita_Azul.png");
+    background-repeat: no-repeat;
+    background-position:center;
+
+    width: 100%;
+    height: 150px;
 }
 
 #Escolas_faixa img{
@@ -165,44 +171,59 @@ main h2{
     
 }
 
-.InterclasseAoVivo{
-    border: 1px solid rgba(0, 0, 0, 0.486);
-    margin: 20px;  
-    padding:20px;  
-    min-width: 760px;
-    overflow: auto;
+#CampeonatoAoVivo{
+    width: 100%;
 }
 
-.Classificacao{
-    margin:    10px; 
-    padding:   0px;
-    width: 50vw;
-    float:left;
+#Tabelas{
+    margin: 25px;
+    padding: 20px;
+    display: inline-block;
+    
+}
+.Grupos{
+    margin-bottom: 15px;
+    
+}
+h2.Grupo{
+    font-family: var(--font-Qatar);
+    color: black;
+}
+table{
+    border: 1px solid var(--cor2);
+    width: 450px;
+    text-align: center;
+    
+}
+table thead{
+    background-color: var(--cor2);
+    color: white;
+    font-family: var(--font-Sigmar);
+    -webkit-text-stroke-width: 0.001px;
+    -webkit-text-stroke-color: black;
+}
+tr, td, th{
+    padding: 10px;
+    border: 1px solid var(--cor2);
+    
+}
+tbody td{
+    border: 1px solid var(--cor2);
 }
 
 #Jogos{
-    width: 27.3vw;
-    float: right;
+    width: 250px;
+    height: 250px;
+    background-color: balck;
+
 }
 
-.jogo{ 
-    max-width: 231px; 
-    height: 90px;
-    border: 1px solid gray;
-    text-align: center;
-    display: inline-block;
-    margin: 5px;
-
-    
+.Jogo{
 }
 
-
-
-.jogo img{
-    width: 60px;
+.Jogo img{
     border-radius: 100%;
-    margin: 15px 10px 0px 10px;
-
+    border: 2px solid var(--cor1);
 }
 
 #Campeonatos_recentes{
