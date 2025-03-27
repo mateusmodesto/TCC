@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'TituloSigmar';
+    src: url(../Fontes/Sigmar-Regular.ttf);
+}
+@font-face {
+    font-family: 'TituloPermament';
+    src: url(../Fontes/PermanentMarker-Regular.ttf);
+}
+@font-face {
+    font-family: 'TituloBerk';
+    src: url(../Fontes/BerkshireSwash-Regular.ttf);
+}
+@font-face {
+    font-family: 'SubTitulo';
+    src: url(../Fontes/Anton-Regular.ttf);
+}
+:root{
+    --cor1: #324AE6;
+    --cor2: #60E600;
+    --cor3: #5D00E6;
+    --cor4: #E6DE00;
+    --cor5: #6F598F;
+    --cor6: #333A66;
+
+    --font-titulo: 'TituloPermament';
+    --font-subtitulo: 'SubTitulo';
+}
+
+@media screen and (min-width:320px ) and (max-width: 575px){
+    #propaganda{
+        width: 100%;
+        height: 370px;
+    
+        display: grid;
+        place-items: center; /* Atalho para alinhar ao centro */
+    
+        background-image: url("../Imagens/Propaganda.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+}
+
+
+@media screen and (min-width: 575px ) and (max-width: 670px){
+    #propaganda{
+        width: 100%;
+        height: 370px;
+    
+        display: grid;
+        place-items: center; /* Atalho para alinhar ao centro */
+    
+        background-image: url("../Imagens/Propaganda.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+}
+@media screen and (min-width: 670px ) and (max-width: 750px){
+    #propaganda{
+        width: 100%;
+        height: 505px;
+    
+        display: grid;
+        place-items: center; /* Atalho para alinhar ao centro */
+    
+        background-image: url("../Imagens/Propaganda.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+}
