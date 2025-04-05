@@ -173,27 +173,29 @@ main h2{
 
 #CampeonatoAoVivo{
     width: 100%;
-}
-
-#Tabelas{
-    margin: 25px;
     padding: 20px;
-    display: inline-block;
-    
 }
 .Grupos{
+    display: flex;
     margin-bottom: 15px;
-    
+    margin: auto;
 }
 h2.Grupo{
     font-family: var(--font-Qatar);
     color: black;
 }
+.tabelas{
+    display: inline-block;
+    width: 45%;
+    border: 1px solid;
+    text-align: center;
+    margin: 20px;
+}
 table{
     border: 1px solid var(--cor2);
     width: 450px;
     text-align: center;
-    
+    margin: auto;
 }
 table thead{
     background-color: var(--cor2);
@@ -212,18 +214,51 @@ tbody td{
 }
 
 #Jogos{
-    width: 250px;
-    height: 250px;
-    background-color: balck;
+    width: 45%;
+    display: inline-block;
+    margin: 20px;
+    font-family: var(--font-Qatar);
+    font-size: 1.5em;
+    align-items: center;
+    text-align: center;
+}
 
+
+.titulo_jogo{
+    text-align: center;
+    font-size: 0.75em;
+    color: white;
+    margin: 0px;
+    padding: 5px 10px 10px 10px;
+    background-color: var(--cor2);
+    border-radius: 25px;
+    display: inline;
 }
 
 .Jogo{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
 .Jogo img{
+    width: 75px;
     border-radius: 100%;
-    border: 2px solid var(--cor1);
+    border: 10px solid var(--cor2);
+}
+.placar_pequeno{
+    margin: 0px;
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    border: 1px solid rgba(128, 128, 128, 0.247);
+    border-radius: 25px;
+}
+.placar_pequeno p{
+    margin: 0px 10px 0px 10px;
+    padding: 5px;
+    background-color: white;
 }
 
 #Campeonatos_recentes{
