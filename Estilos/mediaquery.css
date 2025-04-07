@@ -29,6 +29,13 @@
 }
 
 @media screen and (min-width:320px ) and (max-width: 575px){
+    main>h2{
+        font-family: var(--font-subtitulo);
+        font-size: 2em;
+        margin: 0px;
+        text-align: left;
+    }
+    
     #propaganda{
         width: 100%;
         height: 370px;
@@ -38,9 +45,42 @@
     
         background-image: url("../Imagens/Propaganda.png");
         background-size: contain;
+        background-attachment: local;
         background-repeat: no-repeat;
         background-position: top center;
     }
+    .Grupos{
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+    .tabelas{
+        display: block;
+        width: 100%;
+        margin: auto;
+        padding: 5px;
+        text-align: center;
+    }
+    table{
+        width: 100%;
+    }
+    #Jogos{
+        display: block;
+        width: 45%;
+        margin: auto;
+        font-size: 1em;
+    }
+    .Jogo img{
+        width: 60px;
+    }
+    .placar_pequeno{
+        padding: 5px;    
+    }
+    .placar_pequeno p{
+        padding: 0px;
+        margin: 0px 4px 0px 4px;
+    }
+
 }
 
 

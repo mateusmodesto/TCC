@@ -20,12 +20,12 @@
     src: url(../Fontes/PermanentMarker-Regular.ttf);
 }
 @font-face {
-    font-family: 'TituloBerk';
-    src: url(../Fontes/BerkshireSwash-Regular.ttf);
+    font-family: 'TituloFalse';
+    src: url(../Fontes/False.ttf);
 }
 @font-face {
     font-family: 'SubTitulo';
-    src: url(../Fontes/Anton-Regular.ttf);
+    src: url(../Fontes/Sigmar-Regular.ttf);
 }
 :root{
     --cor1: #324AE6;
@@ -36,8 +36,8 @@
     --cor6: #333A66;
 
     --font-titulo: 'TituloPermament';
-    --font-subtitulo: 'SubTitulo';
-    --font-Qatar: 'TituloBerk';
+    --font-subtitulo: 'TituloFalse';
+    --font-False: 'TituloFalse';
     --font-Sigmar: 'TituloSigmar';
 }
 
@@ -48,13 +48,15 @@
 
 body{
     background-color: black;
+    overflow-x: hidden;
+
 }
 
 header{
     background-color: #344fff;
     color: white;
     padding: 25px 10px 5px 10px; 
-    margin-bottom: 20px;
+    margin-bottom:20px;
 }
 .titulo{
    text-align: center;
@@ -110,28 +112,42 @@ nav{
 }
 
 main{
-    margin: auto;
-    padding: 10px;
     background-color: white;
 }
 main p{
     text-align: justify;
 }
-main h2{
-    font-family: var(--font-subtitulo)
+main>h2{
+    font-family: var(--font-subtitulo);
+    font-size: 3em;
+    margin:20px 0px 10px 80px;
 }
 
 #propaganda{
+    height: 500px;
     width: 100%;
-    height: 700px;
+    margin: 0px;
+    padding: 0px;
 
-    display: grid;
-    place-items: center; /* Atalho para alinhar ao centro */
-
-    background-image: url("../Imagens/Propaganda.png");
+    background-image: url("../Imagens/Propanda_2.png");
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     background-position: top center;
 }
+
+.borrado {
+    background: rgba(255, 255, 255, 0.2); /* leve transparência */
+    backdrop-filter: blur(5px); /* aqui é o blur no fundo */
+    -webkit-backdrop-filter: blur(5px); /* compatibilidade */
+    padding: 2rem;
+    border-radius: 16px;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
 
 #gol_propaganda{
     background-color: var(--cor6);
@@ -175,19 +191,23 @@ main h2{
     width: 100%;
     padding: 20px;
 }
+#CampeonatoAoVivo>h2{
+    text-align: center;
+    font-size: 2.5em;
+}
 .Grupos{
     display: flex;
     margin-bottom: 15px;
     margin: auto;
 }
 h2.Grupo{
-    font-family: var(--font-Qatar);
+    font-family: var(--font-False);
+    font-size: 2em;
     color: black;
 }
 .tabelas{
     display: inline-block;
     width: 45%;
-    border: 1px solid;
     text-align: center;
     margin: 20px;
 }
@@ -211,13 +231,15 @@ tr, td, th{
 }
 tbody td{
     border: 1px solid var(--cor2);
+    font-family: var(--font-False);
+    font-size: 100  ;
 }
 
 #Jogos{
     width: 45%;
     display: inline-block;
     margin: 20px;
-    font-family: var(--font-Qatar);
+    font-family: var(--font-False);
     font-size: 1.5em;
     align-items: center;
     text-align: center;
@@ -237,7 +259,7 @@ tbody td{
 
 .Jogo{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: nowrap;
     align-items: center;
 }
@@ -259,6 +281,7 @@ tbody td{
     margin: 0px 10px 0px 10px;
     padding: 5px;
     background-color: white;
+    font-size: 1.2em;
 }
 
 #Campeonatos_recentes{
