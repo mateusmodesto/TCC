@@ -1,0 +1,218 @@
+
+
+.tudo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #03070a;
+    padding: 1.5rem 0;
+    gap: 3rem; 
+}
+
+
+.escudo1, .escudo2 {
+    border-radius: 100%;
+    width: 5vw;
+    height: 5vw;
+    border: 3px solid #0E3A42;
+    margin: 0; 
+}
+
+
+.meio {
+    width: 20vw;
+    height: 4vw;
+    font-size: 1.8vw;
+    border-radius: 10px;
+    background-color: #0B3138;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1.5vw;
+    padding: 0.5vw;
+    box-shadow: 0 0 10px rgba(96, 230, 0, 0.3);
+}
+
+
+.numplacar {
+    display: flex;
+    gap: 3vw; 
+    align-items: center;
+    font-size: 3vw;
+    color: #60E600;
+    text-shadow: 0 0 6px #60E600;
+}
+
+
+.estatisticas {
+    display: flex;
+    justify-content: center;
+
+    background-color: #0B3138;
+    padding: 1.5vw;
+    border-radius: 12px;
+    width: 40vw;
+    margin-top: 1rem;
+}
+
+.estatisticass {
+    background-color: #1b2e38;
+    padding: 0.5em;
+    font-size: 0.85em;
+    color: white;
+    width: 9vw;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.estatisticasnome{
+    background-color: #1b2e38;
+    padding: 0.5em;
+    font-size: 0.85em;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+}
+
+
+.jogtime1, .jogtime2 {
+    display: flex;
+    flex-direction: column;
+    background-color: #0B3138;
+    color: white;
+    padding: 0.5em;
+    font-size: 0.9em;
+    width: 10vw;
+    border-radius: 10px;
+    gap: 5px;
+    margin: 0;
+}
+
+.jogadores {
+    font-size: 0.9em;
+    padding: 0.4em;
+    background-color: #2258bd;
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.jogadores:hover {
+    background-color: #3B9CE6;
+}
+
+
+.placar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.align_placar{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    padding: 1em;
+    padding-left: 5em;
+    padding-right: 5em;
+    border-radius: 20px;
+    border-style: solid;
+    background-color: #0B3138;
+    border-color: #0B3138;
+       
+}
+
+
+
+
+
+
+
+
+.gols{
+    font-size: 8vw;
+    font-family: serif;
+}
+.minum{
+    font-family: serif;
+    font-size: 7vw;
+    height: auto;
+}
+.iconegols{
+  width: fit-content;
+  border-style: solid;
+  position: absolute;
+  padding:10vw;
+
+}
+.iconeminum{
+    width: 20vw;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+.val{
+    font-size: 34px;
+    font-family: 'Times New Roman', Times, serif;
+    border-style: solid;
+    border-color: #6a6d70;
+    background-color: #0B3138;
+    border-color: #0B3138;
+    color: white;
+    border-radius: 12px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.dados{
+    font-size: 34px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-style: solid;
+    border: none;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    position: relative;
+    width: 15em;
+}
+.bola{
+    width: 40px;
+    height: 40px;
+}
+.botoes{
+    flex-direction: row;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    gap: 5vw;
+    margin-top: 2vw;
+}
+.bot{
+    width: 15vw;
+    height: 4vw;
+    border-radius: 10px;
+}
+.borrado {
+    background-color: #03070a; /* leve transparência */
+    backdrop-filter: blur(5px); /* aqui é o blur no fundo */
+    -webkit-backdrop-filter: blur(5px); /* compatibilidade */
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+    
+  }
+.tudo_menos_borrado{
+    background-color:#03070a;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:top;
+    background-attachment:fixed;
+}

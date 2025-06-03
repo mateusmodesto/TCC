@@ -1,132 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interclasse</title>
-    <link rel="stylesheet" href="./Estilos/style.css">
-    <link rel="stylesheet" href="./Estilos/mediaquery.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interclasses</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="Estilo/style.css">  
 </head>
 <body>
-    <header>
-        <div class="titulo">
-            <img src="Imagens/logo_quebra_galho.jpg" alt="logo" id="logo"> 
-            <h1>Interclasse</h1>
+  <header id="header" class="header-transparent">
+    <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+      <a href="index.html" style="text-decoration: none;">
+        <div style="display: flex; align-items: center; gap: 0.5rem; transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+          <img src="Imagens/logo_quebra_galho.jpg" alt="Logo Interclasse" style="height: 48px; border-radius: 100%; filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));">
+          <span style="font-family: 'Orbitron', sans-serif; font-size: 1.5rem; color: white; text-shadow: 0 0 10px #00ffe7;">INTERCLASSE</span>
         </div>
-        <nav class="navbar bg-body-tertiary" style="padding: 0px;">
-            
-            <div class="container-fluid" style="background-color:  #344fff ;">              
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true" style="background-color: #60E600; border: 0px; padding: 10px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+      </a>
+      <nav style="display: flex; flex-wrap: wrap; gap: 1.5rem; font-weight: bold; font-size: 1rem;">
+        <a href="#" class="nav-link">ACESSO ESCOLAR</a>
+        <a href="#" class="nav-link">TRABALHE CONOSCO</a>
+        <a href="#" class="nav-link">NOTÍCIAS</a>
+      </nav>
+    </div>
 
-                    </button>
-                    <ul class="dropdown-menu" style="background-color: white; color: black;">
-                      <li><a class="dropdown-item" href="#">Login</a></li>
-                      <li><a class="dropdown-item" href="index.html">Menu</a></li>
-                      <li><a class="dropdown-item" href="#">Jogos de Hoje</a></li> <!-- Aqui é preciso fazer um select com os jogos do dia que estiver na máquina-->
-                    </ul>
-                  </div>
-
-                <form class="d-flex" role="search">
-                    <input type="text" name="pesquisar" id="pesquisa" placeholder=" &#128270; Pesquisar" >
-                    <input type="button" value="&#11166;" class="botao_pesquisar">
-                </form>
-            </div>
-        </nav>
-    </header>  
-
-    <main>
-        <div id="propaganda">
-            <div class="borrado">
-                <h2> Gerencie seus Interclasse</h2>
-                <button id="gol_propaganda"> Contato </button>
-            </div>
-        </div>
-        <h2>Acontecendo Agora:</h2>
-        <div id="CampeonatoAoVivo">
-            <h2>Anchieta - 05/04/2025</h2>
-            <div class="Grupos">
-                
-                <div class="tabelas">
-                    <h2 class="Grupo">Grupo 2</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th scope="col" style="text-align: left; padding-right: 50px;">Time</th>
-                                <th scope="col">J</th>
-                                <th scope="col">V</th>
-                                <th scope="col">G</th>
-                                <th scope="col">Pts</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td style="text-align: left; padding-left: 40px;">2InfoB</td>
-                                <td>3</td>
-                                <td>2</td>
-                                <td>10</td>
-                                <td>7</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left; padding-left: 40px;">2InfoB</td>
-                                <td>3</td>
-                                <td>2</td>
-                                <td>10</td>
-                                <td>7</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left; padding-left: 40px;">2InfoB</td>
-                                <td>3</td>
-                                <td>2</td>
-                                <td>10</td>
-                                <td>7</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left; padding-left: 40px;">2InfoB</td>
-                                <td>3</td>
-                                <td>2</td>
-                                <td>10</td>
-                                <td>7</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div id="Jogos">                  
-                    <div style="margin: auto;">
-                        <p class="titulo_jogo">Jogo 1</p>
-                        <div class="Jogo">
-                            <img src="Imagens/objetivo_escola.png" alt="Objetivo">
-                            <div class="placar_pequeno">
-                                <p>Anchieta</p>
-                                <p>0</p>
-                                <p>:</p>
-                                <p>0</p>
-                                <p>Dominus</p>
-                            </div>
-                        
-                            <img src="Imagens/download.jpg" alt="Anchieta">
-
-                        </div>
-                    </div> 
-                    
-                </div>
-            </div>
+    <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+      <div class="search-bar">
+        <input type="text" placeholder="BUSCAR">
+        <i class="fas fa-search"></i>
       </div>
-      
-      <div>
-        <h2>Cameponatos Recentes</h2>
-        <div>
-            
-        </div>
+      <button style="background: linear-gradient(to right, #4d8bff, #1e4cb0); border: none; color: white; font-weight: bold; padding: 0.5rem 1.2rem; border-radius: 20px; cursor: pointer; box-shadow: 0 0 10px rgba(0, 140, 255, 0.5); transition: transform 0.2s;">
+        FAZER LOGIN
+      </button>
+    </div>
+  </header>
+
+  <div class="carousel">
+    <div class="carousel-wrapper">
+      <img id="carousel-img" src="Imagens/Imagem_Carrossel_3.webp" alt="Futebol Escolar" class="carousel-image">
+      <div class="progress-container">
+        <div class="runner"></div>
+        <div class="progress-bar"></div>
       </div>
-    </main>
+    </div>
+  </div>
 
-    <footer>
-        <p>É proibido roubar este site</p>
-    </footer>
+  <main>
+    <div class="filters">
+      <select>
+        <option value="">Selecione o Estado</option>
+        <option value="SP">São Paulo</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="MG">Minas Gerais</option>
+      </select>
+      <select>
+        <option value="">Selecione a Cidade</option>
+        <option value="SaoPaulo">São Paulo</option>
+        <option value="Campinas">Campinas</option>
+        <option value="Rio">Rio de Janeiro</option>
+      </select>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <section class="section">
+      <h2>Campeonatos em Andamento</h2>
+      <div class="cards">
+        <!-- Cards como anteriormente -->
+         <a href="tela_campeonato_cliente.html">Campeonatos</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Campeonatos do Mês</h2>
+      <div class="cards">
+        <!-- Cards como anteriormente -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Interclasses. Todos os direitos reservados.<br />
+    Anúncio: Participe do maior campeonato estudantil do Brasil!<br />
+    <a href="#" style="color:#00ffe7">Contato</a>
+  </footer>
+
+  <script>
+    const carouselImages = [
+      "Imagens/Imagem_Carrossel_3.webp",
+      "Imagens/Imagem_Carrossel_1.webp",
+      "Imagens/Imagem_Carrossel_2_Parte_2.webp"
+    ];
+
+    let current = 0;
+    const imgElement = document.getElementById("carousel-img");
+
+    function changeImage() {
+      imgElement.style.opacity = 0;
+      setTimeout(() => {
+        current = (current + 1) % carouselImages.length;
+        imgElement.src = carouselImages[current];
+        imgElement.style.opacity = 1;
+      }, 500);
+    }
+
+    setInterval(changeImage, 5000);
+
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      if (window.scrollY > 20) {
+        header.classList.remove('header-transparent');
+        header.classList.add('header-scrolled');
+      } else {
+        header.classList.remove('header-scrolled');
+        header.classList.add('header-transparent');
+      }
+    });
+  </script>
 </body>
 </html>

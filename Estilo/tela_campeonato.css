@@ -1,0 +1,209 @@
+/* Estilos migrados do style interno do HTML */
+
+body {
+  color: white;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.logo-img {
+  height: 48px;
+  border-radius: 100%;
+  filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));
+}
+
+.logo-text {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 0 0 10px #00ffe7;
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.login-button {
+  background: linear-gradient(to right, #4d8bff, #1e4cb0);
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 140, 255, 0.5);
+  transition: transform 0.2s;
+}
+
+a {
+    text-decoration: none;
+}
+.jogo-card {
+  transition: width 0.2s linear, height 0.2s linear;
+  display: flex;
+  width: 300px;
+  height: 150px;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1a1a1a;
+  border: 2px solid #00ffe7;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 1rem;
+  padding: 0.5rem;
+  box-shadow: 0 0 15px #00ffe777;
+}
+
+.jogo-card:hover {
+  transform: scale(1.05);
+  background-color: #333;
+  box-shadow: 0 0 25px #00ffe7aa;
+}
+
+.jogo-card .divplacar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  gap: 0.8rem;
+}
+
+.jogo-card .divplacar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.jogo-card .divplacar p {
+  font-size: 28px;
+  color: white;
+}
+
+.jogo-card .divdia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #00ffe7;
+  width: 100%;
+  padding-bottom: 4px;
+}
+
+.jogo-card .divdia p {
+  color: #00ffe7;
+  font-weight: bold;
+}
+
+.section.jogos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.section.cabecalho-campeonato {
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.section.cabecalho-campeonato h1 {
+  font-family: var(--font-titulo);
+  font-size: 3rem;
+  color: #00ffe7;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 15px #00ffe7aa;
+}
+
+.section.cabecalho-campeonato h2 {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+
+.painel-tabela {
+    max-width: 900px;
+    background-color: #111;
+    border-radius: 16px;
+    box-shadow: 0 0 25px #00ffe744;
+    padding: 2rem;
+    margin: 3rem auto 0;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.tab {
+    background: transparent;
+    border: 2px solid #00ffe7;
+    padding: 0.6rem 1.2rem;
+    color: #00ffe7;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border-radius: 10px 10px 0 0;
+    margin: 0 5px;
+}
+
+.tab:hover,
+.tab.active {
+    background: #00ffe7;
+    color: #000;
+}
+
+.tabela-conteudo {
+    display: none;
+}
+
+.tabela-conteudo.ativo {
+    display: block;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #222;
+    color: #00ffe7;
+    text-transform: uppercase;
+}
+
+td {
+    color: #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #1a1a1a;
+}
+
+tr:hover {
+    background-color: #2a2a2a;
+}
+tr:not(:first-child):hover {
+  background-color: #2a2a2a;
+}
+

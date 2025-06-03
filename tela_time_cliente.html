@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interclasse - Informações do Time</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="Estilo/style.css">
+  <link rel="stylesheet" href="Estilo/telatime.css">
+</head>
+<body>
+
+<header id="header" class="header-transparent">
+  <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+    <a href="index.html" style="text-decoration: none;">
+      <div style="display: flex; align-items: center; gap: 0.5rem; transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+        <img src="Imagens/logo_quebra_galho.jpg" alt="Logo Interclasse" style="height: 48px; border-radius: 100%; filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));">
+        <span style="font-family: 'Orbitron', sans-serif; font-size: 1.5rem; color: white; text-shadow: 0 0 10px #00ffe7;">INTERCLASSE</span>
+      </div>
+    </a>
+    <nav style="display: flex; flex-wrap: wrap; gap: 1.5rem; font-weight: bold; font-size: 1rem;">
+      <a href="#" class="nav-link">ACESSO ESCOLAR</a>
+      <a href="#" class="nav-link">TRABALHE CONOSCO</a>
+      <a href="#" class="nav-link">NOTÍCIAS</a>
+    </nav>
+  </div>
+  <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+    <div class="search-bar">
+      <input type="text" placeholder="BUSCAR">
+      <i class="fas fa-search"></i>
+    </div>
+    <button style="background: linear-gradient(to right, #4d8bff, #1e4cb0); border: none; color: white; font-weight: bold; padding: 0.5rem 1.2rem; border-radius: 20px; cursor: pointer; box-shadow: 0 0 10px rgba(0, 140, 255, 0.5); transition: transform 0.2s;">
+      FAZER LOGIN
+    </button>
+  </div>
+</header>
+
+<main>
+  <section>
+    <h1 class="time-title">3° Informática B</h1>
+    <p style="text-align:center;"><strong>Ano de Criação:</strong> 2025</p>
+    <p style="text-align:center;"><strong>Escola:</strong> Escola Padre Anchieta</p>
+    <p style="text-align:center;"><strong>Jogadores:</strong></p>
+    <ul class="players-list" style="list-style: none; padding-left: 0;">
+      <li><button class="player-btn" data-player="1">João Silva</button></li>
+      <li><button class="player-btn" data-player="2">Lucas Ferreira</button></li>
+      <li><button class="player-btn" data-player="3">Carlos Souza</button></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 style="color: #00ffe7;">Estatísticas</h2>
+    <p><strong>Partidas Jogadas:</strong> 10</p>
+    <p><strong>Gols Marcados:</strong> 25</p>
+    <p><strong>Gols Sofridos:</strong> 15</p>
+  </section>
+
+  <section>
+    <h2 style="color: #00ffe7;">Top Artilheiros</h2>
+    <table class="top-scorers-table">
+      <thead>
+        <tr>
+          <th>Jogador</th>
+          <th>Gols</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>João Silva</td><td>10</td></tr>
+        <tr><td>Lucas Ferreira</td><td>8</td></tr>
+        <tr><td>Carlos Souza</td><td>7</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div id="playerModal">
+    <div>
+      <h2 id="modalName"></h2>
+      <p><strong>Idade:</strong> <span id="modalAge"></span></p>
+      <p><strong>Faltas:</strong> <span id="modalFouls"></span></p>
+      <p><strong>Time:</strong> <span id="modalTeam"></span></p>
+      <p><strong>Gols:</strong> <span id="modalGoals"></span></p>
+      <p><strong>Cartões Amarelos:</strong> <span id="modalYellow"></span></p>
+      <p><strong>Cartões Vermelhos:</strong> <span id="modalRed"></span></p>
+      <button onclick="closeModal()">Fechar</button>
+    </div>
+  </div>
+</main>
+
+<footer>
+  © 2025 Interclasses. Todos os direitos reservados.<br />
+  Anúncio: Participe do maior campeonato estudantil do Brasil!<br />
+  <a href="#">Contato</a>
+</footer>
+
+<script>
+const players = {
+  1: { name: "João Silva", age: 17, fouls: 3, team: "Time Exemplo", goals: 10, yellow: 1, red: 0 },
+  2: { name: "Lucas Ferreira", age: 16, fouls: 2, team: "Time Exemplo", goals: 8, yellow: 0, red: 0 },
+  3: { name: "Carlos Souza", age: 17, fouls: 5, team: "Time Exemplo", goals: 7, yellow: 2, red: 1 }
+};
+document.querySelectorAll(".player-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const p = players[btn.dataset.player];
+    document.getElementById("modalName").textContent = p.name;
+    document.getElementById("modalAge").textContent = p.age;
+    document.getElementById("modalFouls").textContent = p.fouls;
+    document.getElementById("modalTeam").textContent = p.team;
+    document.getElementById("modalGoals").textContent = p.goals;
+    document.getElementById("modalYellow").textContent = p.yellow;
+    document.getElementById("modalRed").textContent = p.red;
+    document.getElementById("playerModal").style.display = "flex";
+  });
+});
+function closeModal() {
+  document.getElementById("playerModal").style.display = "none";
+}
+</script>
+
+</body>
+</html>

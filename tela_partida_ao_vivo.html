@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ao Vivo</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="Estilo/style.css">
+  <link rel="stylesheet" href="Estilo/tela_partida_aovivo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <style>
+    .telatime_estatisticas {
+      width: 45vw;
+      border-radius: 10px;
+      position: relative;
+      border-style: solid;
+      margin-top: 2vh;
+      padding: 0;
+      flex-direction: column;
+      background-color: #0E3A42;
+      color: white;
+    }
+
+    .telatime_estatisticasindividuais {
+      transition: max-height 1s ease-out, border-width 1s ease-out;
+      border-width: 0;
+      overflow: hidden;
+      width: 45vw;
+      margin: auto;
+      position: relative;
+      border-style: solid;
+      margin-top: 2vh;
+      padding: 0;
+      flex-direction: column;
+      max-height: 0;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+
+    .telatime_estatisticasindividuais.aberta {
+      border-width: 4px;
+      max-height: 800px;
+      transition: max-height 1s ease-out, border-width 1s ease-out;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header" class="header-transparent">
+    <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+      <a href="index.html" style="text-decoration: none;">
+        <div style="display: flex; align-items: center; gap: 0.5rem; transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+          <img src="Imagens/logo_quebra_galho.jpg" alt="Logo Interclasse" style="height: 48px; border-radius: 100%; filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));">
+          <span style="font-family: 'Orbitron', sans-serif; font-size: 1.5rem; color: white; text-shadow: 0 0 10px #00ffe7;">INTERCLASSE</span>
+        </div>
+      </a>
+      <nav style="display: flex; flex-wrap: wrap; gap: 1.5rem; font-weight: bold; font-size: 1rem;">
+        <a href="#" class="nav-link">ACESSO ESCOLAR</a>
+        <a href="#" class="nav-link">TRABALHE CONOSCO</a>
+        <a href="#" class="nav-link">NOTÍCIAS</a>
+      </nav>
+    </div>
+    <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+      <div class="search-bar">
+        <input type="text" placeholder="BUSCAR">
+        <i class="fas fa-search"></i>
+      </div>
+      <button style="background: linear-gradient(to right, #4d8bff, #1e4cb0); border: none; color: white; font-weight: bold; padding: 0.5rem 1.2rem; border-radius: 20px; cursor: pointer; box-shadow: 0 0 10px rgba(0, 140, 255, 0.5); transition: transform 0.2s;">
+        FAZER LOGIN
+      </button>
+    </div>
+  </header>
+
+  <div class="tudo_menos_borrado">
+    <div class="borrado">
+      <div class="placar">
+        <div class="align_placar">
+          <img class="escudo1" src="Imagens/divino_escola.jpg">
+          <div class="meio">
+            <p class="numplacar">0</p>
+            <p class="numplacar">-</p>
+            <p class="numplacar">0</p>
+          </div>
+          <img class="escudo2" src="Imagens/divino_escola.jpg">
+        </div>
+      </div>
+
+      <div class="tudo">
+        <div class="jogtime1">
+          <!-- Jogadores do time 1 -->
+          <p onclick="mostrarjogador()" class="jogadores">Goleiro</p>
+          <p onclick="mostrarjogador()" class="jogadores">Jogador 1</p>
+          <p onclick="mostrarjogador()" class="jogadores">Jogador 2</p>
+          <p onclick="mostrarjogador()" class="jogadores">Jogador 3</p>
+          <p onclick="mostrarjogador()" class="jogadores">Jogador 4</p>
+          <p onclick="mostrarjogador()" class="jogadores">Jogador 5</p>
+          <p onclick="mostrarjogador()" class="jogadores">Jogador 6</p>
+          <p onclick="mostrarjogador()" class="jogadores">Jogador 7</p>
+          <p onclick="mostrarjogador()" class="jogadores">Jogador 8</p>
+          <p onclick="mostrarjogador()" class="jogadores">Jogador 9</p>
+          <p onclick="mostrarjogador()" class="jogadores">Jogador 10</p>
+        </div>
+
+        <div class="estatisticas">
+          <div class="estatisticass">
+            <p class="val">0</p>
+            <p class="val">0</p>
+            <p class="val">0</p>
+            <p class="val">0</p>
+            <p class="val">0</p>
+          </div>
+
+          <div class="estatisticasnome">
+            <p class="dados">Chutes a Gol</p>
+            <p class="dados">Faltas</p>
+            <p class="dados">Cartões Amarelos</p>
+            <p class="dados">Cartões Vermelhos</p>
+            <p class="dados">Pênaltis</p>
+          </div>
+
+          <div class="estatisticass">
+            <p class="val">0</p>
+            <p class="val">0</p>
+            <p class="val">0</p>
+            <p class="val">0</p>
+            <p class="val">0</p>
+          </div>
+        </div>
+
+        <div class="jogtime2">
+          <!-- Jogadores do time 2 -->
+          <p onclick="mostrarjogador()" class="jogadores">Goleiro</p>
+          <p onclick="mostrarjogador()" class="jogadores">Jogador 1</p>
+          <p onclick="mostrarjogador()" class="jogadores">Jogador 2</p>
+          <p onclick="mostrarjogador()" class="jogadores">Jogador 3</p>
+          <p onclick="mostrarjogador()" class="jogadores">Jogador 4</p>
+          <p onclick="mostrarjogador()" class="jogadores">Jogador 5</p>
+          <p onclick="mostrarjogador()" class="jogadores">Jogador 6</p>
+          <p onclick="mostrarjogador()" class="jogadores">Jogador 7</p>
+          <p onclick="mostrarjogador()" class="jogadores">Jogador 8</p>
+          <p onclick="mostrarjogador()" class="jogadores">Jogador 9</p>
+          <p onclick="mostrarjogador()" class="jogadores">Jogador 10</p>
+        </div>
+      </div>
+
+      <div class="telatime_estatisticas" style="align-items:center; margin:auto; text-align:center;">
+        <h1 id="selecionar" style="font-size:24px">SELECIONE UM JOGADOR E VEJA SUAS ESTATÍSTICAS!!!</h1>
+      </div>
+
+      <div id="divconsulta" class="telatime_estatisticasindividuais" style="background-color:white; border-radius:2px">
+        <div class="telatime_divimagem" style="border-width:0px;">
+          <img src="Imagens/divino_escola.jpg" alt="">
+        </div>
+        <h1 style="font-size:20px">NOME DO JOGADOR</h1>
+        <p>Idade:<?php ?></p>
+        <p>Faltas:<?php ?></p>
+        <p>Time:<?php ?></p>
+        <p>Gols:<?php ?></p>
+        <p>Cartões Amarelos:<?php ?></p>
+        <p>Cartões Vermelhos:<?php ?></p>
+        <p>Assistências:</p>
+        <p onclick="mostrarjogador()" class="telatime_voltar" style="border-radius:2px;font-size:30px;width:100%;background-color:#0F2F4A;color:white;display:flex;justify-content:center;margin-bottom:0px;">Voltar</p>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer"></footer>
+
+  <script>
+    function mostrarjogador() {
+      const divconsulta = document.getElementById("divconsulta");
+      const selecionar = document.getElementById("selecionar");
+      const footer = document.getElementById("footer");
+
+      divconsulta.classList.toggle("aberta");
+
+      setTimeout(() => {
+        selecionar.textContent = selecionar.textContent === "SELECIONE UM JOGADOR E VEJA SUAS ESTATÍSTICAS!!!"
+          ? "JOGADOR SELECIONADO!!!"
+          : "SELECIONE UM JOGADOR E VEJA SUAS ESTATÍSTICAS!!!";
+      }, 500);
+
+      setTimeout(() => {
+        footer.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 600);
+    }
+  </script>
+</body>
+
+</html>
