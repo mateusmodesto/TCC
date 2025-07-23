@@ -1,53 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ao Vivo</title>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-  <link rel="stylesheet" href="Estilo/style.css">
-  <link rel="stylesheet" href="Estilo/tela_partida_aovivo.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-  <style>
-    .telatime_estatisticas {
-      width: 45vw;
-      border-radius: 10px;
-      position: relative;
-      border-style: solid;
-      margin-top: 2vh;
-      padding: 0;
-      flex-direction: column;
-      background-color: #0E3A42;
-      color: white;
-    }
-
-    .telatime_estatisticasindividuais {
-      transition: max-height 1s ease-out, border-width 1s ease-out;
-      border-width: 0;
-      overflow: hidden;
-      width: 45vw;
-      margin: auto;
-      position: relative;
-      border-style: solid;
-      margin-top: 2vh;
-      padding: 0;
-      flex-direction: column;
-      max-height: 0;
-      justify-content: center;
-      align-items: center;
-      display: flex;
-    }
-
-    .telatime_estatisticasindividuais.aberta {
-      border-width: 4px;
-      max-height: 800px;
-      transition: max-height 1s ease-out, border-width 1s ease-out;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Partida - Ao Vivo</title>
+  <link rel="stylesheet" href="Estilo/style.css" />
+  <link rel="stylesheet" href="Estilo/tela_partida_aovivo.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -60,136 +20,155 @@
         </div>
       </a>
       <nav style="display: flex; flex-wrap: wrap; gap: 1.5rem; font-weight: bold; font-size: 1rem;">
-        <a href="#" class="nav-link">ACESSO ESCOLAR</a>
+        <a href="Empresarial/LOGIN.php" class="nav-link">ACESSO ESCOLAR</a>
         <a href="#" class="nav-link">TRABALHE CONOSCO</a>
         <a href="#" class="nav-link">NOTÍCIAS</a>
       </nav>
     </div>
+
     <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
       <div class="search-bar">
         <input type="text" placeholder="BUSCAR">
         <i class="fas fa-search"></i>
       </div>
-      <button style="background: linear-gradient(to right, #4d8bff, #1e4cb0); border: none; color: white; font-weight: bold; padding: 0.5rem 1.2rem; border-radius: 20px; cursor: pointer; box-shadow: 0 0 10px rgba(0, 140, 255, 0.5); transition: transform 0.2s;">
-        FAZER LOGIN
+      <button style="background: linear-gradient(to right, #4da0ff, #1e93b0); border: none; color: white; font-weight: bold; padding: 0.5rem 1.2rem; border-radius: 20px; cursor: pointer; box-shadow: 0 0 10px rgba(0, 140, 255, 0.5); transition: transform 0.2s;">
+        <a href="tela_login_cliente.html" style="text-decoration: none; color: white; font-weight: bold;">FAZER LOGIN</a>
       </button>
     </div>
   </header>
 
-  <div class="tudo_menos_borrado">
-    <div class="borrado">
-      <div class="placar">
-        <div class="align_placar">
-          <img class="escudo1" src="Imagens/divino_escola.jpg">
-          <div class="meio">
-            <p class="numplacar">0</p>
-            <p class="numplacar">-</p>
-            <p class="numplacar">0</p>
+  <main>
+    <!-- APRESENTAÇÃO -->
+    <section class="section" style="text-align: center; margin-top: 120px;">
+      <h2>Campeonato Municipal Escolar</h2>
+      <p style="color: #00ffe7;">Colégio Divino | 03/06/2025</p>
+    </section>
+  
+    <!-- PLACAR MODERNO -->
+    <section class="scoreboard-modern">
+      <div class="team">
+        <img src="Imagens/divino_escola.jpg" alt="Time 1" />
+        <h3>Time A</h3>
+      </div>
+      <div class="score">
+        <span class="score-number">0</span>
+        <span class="score-separator">x</span>
+        <span class="score-number">0</span>
+        <p class="match-status">Ao Vivo</p> <!-- ou "Encerrado" / "Próximo: 05/06" -->
+      </div>
+      <div class="team">
+        <img src="Imagens/divino_escola.jpg" alt="Time 2" />
+        <h3>Time B</h3>
+      </div>
+    </section>
+  
+    <!-- ESTATÍSTICAS COM BARRAS -->
+    <section class="section">
+      <h2>Estatísticas</h2>
+      <div class="stats-container">
+        <div class="stat-row" data-stat="Chutes a Gol" data-left="4" data-right="6"></div>
+        <div class="stat-row" data-stat="Faltas" data-left="3" data-right="7"></div>
+        <div class="stat-row" data-stat="Cartões Amarelos" data-left="1" data-right="2"></div>
+        <div class="stat-row" data-stat="Cartões Vermelhos" data-left="0" data-right="1"></div>
+      </div>
+    </section>
+    
+  
+    <!-- ESCALAÇÃO -->
+    <section class="section">
+      <h2>Escalações</h2>
+      <div class="lineup-container">
+        <div class="lineup">
+          <h3>Time A</h3>
+          <div class="players">
+            <button class="player-btn" data-player="1">Jogador 1</button>
+            <button class="player-btn" data-player="2">Jogador 2</button>
+            <button class="player-btn" data-player="2">Jogador 3</button>
+            <button class="player-btn" data-player="2">Jogador 4</button>
           </div>
-          <img class="escudo2" src="Imagens/divino_escola.jpg">
+        </div>
+        <div class="lineup">
+          <h3>Time B</h3>
+          <div class="players">
+            <button class="player-btn">Goleiro</button>
+            <button class="player-btn">Jogador 1</button>
+            <button class="player-btn">Jogador 2</button>
+            <button class="player-btn">Jogador 3</button>
+          </div>
         </div>
       </div>
-
-      <div class="tudo">
-        <div class="jogtime1">
-          <!-- Jogadores do time 1 -->
-          <p onclick="mostrarjogador()" class="jogadores">Goleiro</p>
-          <p onclick="mostrarjogador()" class="jogadores">Jogador 1</p>
-          <p onclick="mostrarjogador()" class="jogadores">Jogador 2</p>
-          <p onclick="mostrarjogador()" class="jogadores">Jogador 3</p>
-          <p onclick="mostrarjogador()" class="jogadores">Jogador 4</p>
-          <p onclick="mostrarjogador()" class="jogadores">Jogador 5</p>
-          <p onclick="mostrarjogador()" class="jogadores">Jogador 6</p>
-          <p onclick="mostrarjogador()" class="jogadores">Jogador 7</p>
-          <p onclick="mostrarjogador()" class="jogadores">Jogador 8</p>
-          <p onclick="mostrarjogador()" class="jogadores">Jogador 9</p>
-          <p onclick="mostrarjogador()" class="jogadores">Jogador 10</p>
-        </div>
-
-        <div class="estatisticas">
-          <div class="estatisticass">
-            <p class="val">0</p>
-            <p class="val">0</p>
-            <p class="val">0</p>
-            <p class="val">0</p>
-            <p class="val">0</p>
-          </div>
-
-          <div class="estatisticasnome">
-            <p class="dados">Chutes a Gol</p>
-            <p class="dados">Faltas</p>
-            <p class="dados">Cartões Amarelos</p>
-            <p class="dados">Cartões Vermelhos</p>
-            <p class="dados">Pênaltis</p>
-          </div>
-
-          <div class="estatisticass">
-            <p class="val">0</p>
-            <p class="val">0</p>
-            <p class="val">0</p>
-            <p class="val">0</p>
-            <p class="val">0</p>
-          </div>
-        </div>
-
-        <div class="jogtime2">
-          <!-- Jogadores do time 2 -->
-          <p onclick="mostrarjogador()" class="jogadores">Goleiro</p>
-          <p onclick="mostrarjogador()" class="jogadores">Jogador 1</p>
-          <p onclick="mostrarjogador()" class="jogadores">Jogador 2</p>
-          <p onclick="mostrarjogador()" class="jogadores">Jogador 3</p>
-          <p onclick="mostrarjogador()" class="jogadores">Jogador 4</p>
-          <p onclick="mostrarjogador()" class="jogadores">Jogador 5</p>
-          <p onclick="mostrarjogador()" class="jogadores">Jogador 6</p>
-          <p onclick="mostrarjogador()" class="jogadores">Jogador 7</p>
-          <p onclick="mostrarjogador()" class="jogadores">Jogador 8</p>
-          <p onclick="mostrarjogador()" class="jogadores">Jogador 9</p>
-          <p onclick="mostrarjogador()" class="jogadores">Jogador 10</p>
-        </div>
-      </div>
-
-      <div class="telatime_estatisticas" style="align-items:center; margin:auto; text-align:center;">
-        <h1 id="selecionar" style="font-size:24px">SELECIONE UM JOGADOR E VEJA SUAS ESTATÍSTICAS!!!</h1>
-      </div>
-
-      <div id="divconsulta" class="telatime_estatisticasindividuais" style="background-color:white; border-radius:2px">
-        <div class="telatime_divimagem" style="border-width:0px;">
-          <img src="Imagens/divino_escola.jpg" alt="">
-        </div>
-        <h1 style="font-size:20px">NOME DO JOGADOR</h1>
-        <p>Idade:<?php ?></p>
-        <p>Faltas:<?php ?></p>
-        <p>Time:<?php ?></p>
-        <p>Gols:<?php ?></p>
-        <p>Cartões Amarelos:<?php ?></p>
-        <p>Cartões Vermelhos:<?php ?></p>
-        <p>Assistências:</p>
-        <p onclick="mostrarjogador()" class="telatime_voltar" style="border-radius:2px;font-size:30px;width:100%;background-color:#0F2F4A;color:white;display:flex;justify-content:center;margin-bottom:0px;">Voltar</p>
+    </section>
+    <div id="playerModal">
+      <div>
+        <h2 id="modalName"></h2>
+        <p><strong>Idade:</strong> <span id="modalAge"></span></p>          
+        <p><strong>Time:</strong> <span id="modalTeam"></span></p>          
+        <p><strong>Gols:</strong> <span id="modalGoals"></span></p>
+        <p><strong>Faltas:</strong> <span id="modalFouls"></span></p>
+        <p><strong>Cartões Amarelos:</strong> <span id="modalYellow"></span></p>
+        <p><strong>Cartões Vermelhos:</strong> <span id="modalRed"></span></p>
+        <button onclick="closeModal()">Fechar</button>
       </div>
     </div>
-  </div>
+  </main>
 
-  <footer id="footer"></footer>
+  <footer>
+    © 2025 Interclasses. Todos os direitos reservados.<br />
+    Anúncio: Participe do maior campeonato estudantil do Brasil!<br />
+    <a href="#">Contato</a>
+  </footer>
 
   <script>
-    function mostrarjogador() {
-      const divconsulta = document.getElementById("divconsulta");
-      const selecionar = document.getElementById("selecionar");
-      const footer = document.getElementById("footer");
+    const players = {
+      1: { name: "João Silva", age: 17, fouls: 3, team: "Time Exemplo", goals: 10, yellow: 1, red: 0 },
+      2: { name: "Lucas Ferreira", age: 16, fouls: 2, team: "Time Exemplo", goals: 8, yellow: 0, red: 0 }
+    };
 
-      divconsulta.classList.toggle("aberta");
+    document.querySelectorAll(".player-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const p = players[btn.dataset.player];
+        if (!p) return;
+        document.getElementById("modalName").textContent = p.name;
+        document.getElementById("modalAge").textContent = p.age;
+        document.getElementById("modalFouls").textContent = p.fouls;
+        document.getElementById("modalTeam").textContent = p.team;
+        document.getElementById("modalGoals").textContent = p.goals;
+        document.getElementById("modalYellow").textContent = p.yellow;
+        document.getElementById("modalRed").textContent = p.red;
+        document.getElementById("playerModal").style.display = "flex";
+      });
+    });
 
-      setTimeout(() => {
-        selecionar.textContent = selecionar.textContent === "SELECIONE UM JOGADOR E VEJA SUAS ESTATÍSTICAS!!!"
-          ? "JOGADOR SELECIONADO!!!"
-          : "SELECIONE UM JOGADOR E VEJA SUAS ESTATÍSTICAS!!!";
-      }, 500);
-
-      setTimeout(() => {
-        footer.scrollIntoView({ behavior: "smooth", block: "center" });
-      }, 600);
+    function closeModal() {
+      document.getElementById("playerModal").style.display = "none";
     }
+
+    function renderStats() {
+    document.querySelectorAll('.stat-row').forEach(row => {
+      const label = row.dataset.stat;
+      const left = parseInt(row.dataset.left);
+      const right = parseInt(row.dataset.right);
+      const total = left + right || 1;
+
+      const leftPercent = (left / total) * 100;
+      const rightPercent = (right / total) * 100;
+
+      row.innerHTML = `
+        <span class="label">${label}</span>
+        <div class="stat-bar">
+          <div class="bar-fill" style="width: ${leftPercent}%"></div>
+          <div class="bar-fill right" style="width: ${rightPercent}%"></div>
+        </div>
+        <div class="stat-values-below">
+          <span class="left-value">${left}</span>
+          <span class="right-value">${right}</span>
+        </div>
+      `;
+    });
+  }
+
+  renderStats();
+
   </script>
 </body>
-
 </html>

@@ -13,29 +13,31 @@
 <body>
 
 <header id="header" class="header-transparent">
-  <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
-    <a href="index.html" style="text-decoration: none;">
-      <div style="display: flex; align-items: center; gap: 0.5rem; transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-        <img src="Imagens/logo_quebra_galho.jpg" alt="Logo Interclasse" style="height: 48px; border-radius: 100%; filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));">
-        <span style="font-family: 'Orbitron', sans-serif; font-size: 1.5rem; color: white; text-shadow: 0 0 10px #00ffe7;">INTERCLASSE</span>
-      </div>
-    </a>
-    <nav style="display: flex; flex-wrap: wrap; gap: 1.5rem; font-weight: bold; font-size: 1rem;">
-      <a href="#" class="nav-link">ACESSO ESCOLAR</a>
-      <a href="#" class="nav-link">TRABALHE CONOSCO</a>
-      <a href="#" class="nav-link">NOTÍCIAS</a>
-    </nav>
-  </div>
-  <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
-    <div class="search-bar">
-      <input type="text" placeholder="BUSCAR">
-      <i class="fas fa-search"></i>
+  <header id="header" class="header-transparent">
+    <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+      <a href="index.html" style="text-decoration: none;">
+        <div style="display: flex; align-items: center; gap: 0.5rem; transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+          <img src="Imagens/logo_quebra_galho.jpg" alt="Logo Interclasse" style="height: 48px; border-radius: 100%; filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));">
+          <span style="font-family: 'Orbitron', sans-serif; font-size: 1.5rem; color: white; text-shadow: 0 0 10px #00ffe7;">INTERCLASSE</span>
+        </div>
+      </a>
+      <nav style="display: flex; flex-wrap: wrap; gap: 1.5rem; font-weight: bold; font-size: 1rem;">
+        <a href="Empresarial/LOGIN.php" class="nav-link">ACESSO ESCOLAR</a>
+        <a href="#" class="nav-link">TRABALHE CONOSCO</a>
+        <a href="#" class="nav-link">NOTÍCIAS</a>
+      </nav>
     </div>
-    <button style="background: linear-gradient(to right, #4d8bff, #1e4cb0); border: none; color: white; font-weight: bold; padding: 0.5rem 1.2rem; border-radius: 20px; cursor: pointer; box-shadow: 0 0 10px rgba(0, 140, 255, 0.5); transition: transform 0.2s;">
-      FAZER LOGIN
-    </button>
-  </div>
-</header>
+
+    <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+      <div class="search-bar">
+        <input type="text" placeholder="BUSCAR">
+        <i class="fas fa-search"></i>
+      </div>
+      <button style="background: linear-gradient(to right, #4da0ff, #1e93b0); border: none; color: white; font-weight: bold; padding: 0.5rem 1.2rem; border-radius: 20px; cursor: pointer; box-shadow: 0 0 10px rgba(0, 140, 255, 0.5); transition: transform 0.2s;">
+        <a href="tela_login_cliente.html" style="text-decoration: none; color: white; font-weight: bold;">FAZER LOGIN</a>
+      </button>
+    </div>
+  </header>
 
 <main>
   <section>
@@ -77,10 +79,10 @@
   <div id="playerModal">
     <div>
       <h2 id="modalName"></h2>
-      <p><strong>Idade:</strong> <span id="modalAge"></span></p>
-      <p><strong>Faltas:</strong> <span id="modalFouls"></span></p>
-      <p><strong>Time:</strong> <span id="modalTeam"></span></p>
+      <p><strong>Idade:</strong> <span id="modalAge"></span></p>          
+      <p><strong>Time:</strong> <span id="modalTeam"></span></p>          
       <p><strong>Gols:</strong> <span id="modalGoals"></span></p>
+      <p><strong>Faltas:</strong> <span id="modalFouls"></span></p>
       <p><strong>Cartões Amarelos:</strong> <span id="modalYellow"></span></p>
       <p><strong>Cartões Vermelhos:</strong> <span id="modalRed"></span></p>
       <button onclick="closeModal()">Fechar</button>

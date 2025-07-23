@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interclasses</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interclasse</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="Estilo/style.css">  
 </head>
 <body>
+  <div class="overlay" id="menuOverlay" onclick="toggleMenu()"></div>
   <header id="header" class="header-transparent">
     <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
       <a href="index.html" style="text-decoration: none;">
@@ -17,7 +18,8 @@
           <span style="font-family: 'Orbitron', sans-serif; font-size: 1.5rem; color: white; text-shadow: 0 0 10px #00ffe7;">INTERCLASSE</span>
         </div>
       </a>
-      <nav style="display: flex; flex-wrap: wrap; gap: 1.5rem; font-weight: bold; font-size: 1rem;">
+      <button class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+      <nav id="navLinks" style="display: flex; flex-wrap: wrap; gap: 1.5rem; font-weight: bold; font-size: 1rem;">
         <a href="Empresarial/LOGIN.php" class="nav-link">ACESSO ESCOLAR</a>
         <a href="#" class="nav-link">TRABALHE CONOSCO</a>
         <a href="#" class="nav-link">NOTÍCIAS</a>
@@ -29,8 +31,8 @@
         <input type="text" placeholder="BUSCAR">
         <i class="fas fa-search"></i>
       </div>
-      <button style="background: linear-gradient(to right, #4d8bff, #1e4cb0); border: none; color: white; font-weight: bold; padding: 0.5rem 1.2rem; border-radius: 20px; cursor: pointer; box-shadow: 0 0 10px rgba(0, 140, 255, 0.5); transition: transform 0.2s;">
-        FAZER LOGIN
+      <button style="background: linear-gradient(to right, #4da0ff, #1e93b0); border: none; color: white; font-weight: bold; padding: 0.5rem 1.2rem; border-radius: 20px; cursor: pointer; box-shadow: 0 0 10px rgba(0, 140, 255, 0.5); transition: transform 0.2s;">
+        <a href="tela_login_cliente.html" style="width:100%; text-decoration: none; color: white; font-weight: bold;"><i class="fa-regular fa-user"></i></a>
       </button>
     </div>
   </header>
@@ -46,27 +48,177 @@
   </div>
 
   <main>
-    <div class="filters">
-      <select>
-        <option value="">Selecione o Estado</option>
-        <option value="SP">São Paulo</option>
-        <option value="RJ">Rio de Janeiro</option>
-        <option value="MG">Minas Gerais</option>
-      </select>
-      <select>
-        <option value="">Selecione a Cidade</option>
-        <option value="SaoPaulo">São Paulo</option>
-        <option value="Campinas">Campinas</option>
-        <option value="Rio">Rio de Janeiro</option>
-      </select>
+     <div class="filters-toggle">
+      <button id="filterBtn" style="background: #00ffe7; color: #fff; border: none; padding: 0.5rem 1.2rem; border-radius: 20px; cursor: pointer; box-shadow: 0 0 10px rgba(0, 140, 255, 0.5); transition: transform 0.2s;">
+        <i class="fas fa-filter"></i> Filtrar
+      </button>
+    </div>
+
+    <!-- Container dos filtros -->
+    <div id="filtersContainer" style="display: none; margin-top: 1rem;">
+      <div class="filters">
+        <select>
+          <option value="">Selecione o Estado</option>
+          <option value="SP">São Paulo</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="MG">Minas Gerais</option>
+        </select>
+        <select>
+          <option value="">Selecione a Cidade</option>
+          <option value="SaoPaulo">São Paulo</option>
+          <option value="Campinas">Campinas</option>
+          <option value="Rio">Rio de Janeiro</option>
+        </select>
+      </div>
     </div>
 
     <section class="section">
       <h2>Campeonatos em Andamento</h2>
-      <div class="cards">
-        <!-- Cards como anteriormente -->
-         <a href="tela_campeonato_cliente.html">Campeonatos</a>
+      <div class="carousel-wrapper">
+        <button class="carousel-btn left" onclick="scrollCarousel(-1)"><i class="fas fa-chevron-left"></i></button>
+        <div class="carousel-container">
+          <div class="cards-carousel" id="cardsCarousel">
+            <!-- Adicione aqui seus cards com a estrutura live-card como mostrado antes -->
+            <!-- Exemplo de um card (repita ou carregue dinamicamente): -->
+            <a href="tela_campeonato_cliente.html" class="card live-card is-live">
+              <div class="card-img-wrapper">
+                <img src="Imagens/download.jpg" alt="Escola 1">
+              </div>
+              <div class="card-content">
+                <h3>Copa Interclasse - Norte</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Manaus - AM</p>
+                <p><i class="fas fa-calendar-day"></i> 06/06/2025</p>
+                <span class="live-badge">● AO VIVO</span>
+              </div>
+            </a>   
+            <a href="tela_campeonato_cliente.html" class="card live-card is-live">
+              <div class="card-img-wrapper">
+                <img src="Imagens/download.jpg" alt="Escola 1">
+              </div>
+              <div class="card-content">
+                <h3>Copa Interclasse - Norte</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Manaus - AM</p>
+                <p><i class="fas fa-calendar-day"></i> 06/06/2025</p>
+                <span class="live-badge">● AO VIVO</span>
+              </div>
+            </a>  
+            <a href="tela_campeonato_cliente.html" class="card live-card is-live">
+              <div class="card-img-wrapper">
+                <img src="Imagens/download.jpg" alt="Escola 1">
+              </div>
+              <div class="card-content">
+                <h3>Copa Interclasse - Norte</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Manaus - AM</p>
+                <p><i class="fas fa-calendar-day"></i> 06/06/2025</p>
+                <span class="live-badge">● AO VIVO</span>
+              </div>
+            </a>  
+            <a href="tela_campeonato_cliente.html" class="card live-card is-live">
+              <div class="card-img-wrapper">
+                <img src="Imagens/download.jpg" alt="Escola 1">
+              </div>
+              <div class="card-content">
+                <h3>Copa Interclasse - Norte</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Manaus - AM</p>
+                <p><i class="fas fa-calendar-day"></i> 06/06/2025</p>
+                <span class="live-badge">● AO VIVO</span>
+              </div>
+            </a>  
+            <a href="tela_campeonato_cliente.html" class="card live-card is-live">
+              <div class="card-img-wrapper">
+                <img src="Imagens/download.jpg" alt="Escola 1">
+              </div>
+              <div class="card-content">
+                <h3>Copa Interclasse - Norte</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Manaus - AM</p>
+                <p><i class="fas fa-calendar-day"></i> 06/06/2025</p>
+                <span class="live-badge">● AO VIVO</span>
+              </div>
+            </a>  
+            <a href="tela_campeonato_cliente.html" class="card live-card is-live">
+              <div class="card-img-wrapper">
+                <img src="Imagens/download.jpg" alt="Escola 1">
+              </div>
+              <div class="card-content">
+                <h3>Copa Interclasse - Norte</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Manaus - AM</p>
+                <p><i class="fas fa-calendar-day"></i> 06/06/2025</p>
+                <span class="live-badge">● AO VIVO</span>
+              </div>
+            </a>  
+            <a href="tela_campeonato_cliente.html" class="card live-card is-live">
+              <div class="card-img-wrapper">
+                <img src="Imagens/download.jpg" alt="Escola 1">
+              </div>
+              <div class="card-content">
+                <h3>Copa Interclasse - Norte</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Manaus - AM</p>
+                <p><i class="fas fa-calendar-day"></i> 06/06/2025</p>
+                <span class="live-badge">● AO VIVO</span>
+              </div>
+            </a>  
+            <a href="tela_campeonato_cliente.html" class="card live-card is-live">
+              <div class="card-img-wrapper">
+                <img src="Imagens/download.jpg" alt="Escola 1">
+              </div>
+              <div class="card-content">
+                <h3>Copa Interclasse - Norte</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Manaus - AM</p>
+                <p><i class="fas fa-calendar-day"></i> 06/06/2025</p>
+                <span class="live-badge">● AO VIVO</span>
+              </div>
+            </a>       
+            <a href="tela_campeonato_cliente.html" class="card live-card is-live">
+              <div class="card-img-wrapper">
+                <img src="Imagens/download.jpg" alt="Escola 1">
+              </div>
+              <div class="card-content">
+                <h3>Copa Interclasse - Norte</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Manaus - AM</p>
+                <p><i class="fas fa-calendar-day"></i> 06/06/2025</p>
+                <span class="live-badge">● AO VIVO</span>
+              </div>
+            </a>    
+            <a href="tela_campeonato_cliente.html" class="card live-card is-live">
+              <div class="card-img-wrapper">
+                <img src="Imagens/download.jpg" alt="Escola 1">
+              </div>
+              <div class="card-content">
+                <h3>Copa Interclasse - Norte</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Manaus - AM</p>
+                <p><i class="fas fa-calendar-day"></i> 06/06/2025</p>
+                <span class="live-badge">● AO VIVO</span>
+              </div>
+            </a>       
+            <a href="tela_campeonato_cliente.html" class="card live-card is-live">
+              <div class="card-img-wrapper">
+                <img src="Imagens/download.jpg" alt="Escola 1">
+              </div>
+              <div class="card-content">
+                <h3>Copa Interclasse - Norte</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Manaus - AM</p>
+                <p><i class="fas fa-calendar-day"></i> 06/06/2025</p>
+                <span class="live-badge">● AO VIVO</span>
+              </div>
+            </a>                 
+            <a href="tela_campeonato_cliente.html" class="card live-card is-live">
+              <div class="card-img-wrapper">
+                <img src="Imagens/download.jpg" alt="Escola 1">
+              </div>
+              <div class="card-content">
+                <h3>Copa Interclasse - Norte</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Manaus - AM</p>
+                <p><i class="fas fa-calendar-day"></i> 06/06/2025</p>
+                <span class="live-badge">● AO VIVO</span>
+              </div>
+            </a>       
+          </div>
+        </div>
+        
+      
+        <button class="carousel-btn right" onclick="scrollCarousel(1)"><i class="fas fa-chevron-right"></i></button>
       </div>
+      
     </section>
 
     <section class="section">
@@ -84,6 +236,11 @@
   </footer>
 
   <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("show");
+    }
+
     const carouselImages = [
       "Imagens/Imagem_Carrossel_3.webp",
       "Imagens/Imagem_Carrossel_1.webp",
@@ -114,6 +271,26 @@
         header.classList.add('header-transparent');
       }
     });
+
+    const track = document.getElementById("cardsCarousel");
+    const totalCards = track.children.length;
+    const visibleCards = 5;
+    const cardWidth = 280 + 20; // largura + gap
+    let position = 0;
+
+    function scrollCarousel(direction) {
+      const maxPosition = totalCards - visibleCards;
+
+      if ((direction === 1 && position >= maxPosition) ||
+          (direction === -1 && position <= 0)) {
+        track.classList.add('shake');
+        setTimeout(() => track.classList.remove('shake'), 400);
+        return;
+      }
+
+      position += direction;
+      track.style.transform = `translateX(-${position * cardWidth}px)`;
+    }
   </script>
 </body>
 </html>
